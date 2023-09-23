@@ -53,20 +53,20 @@ Home
 <div id="ttr_header_inner">
 <div class="ttr_header_element_alignment container">
 <div class="ttr_images_container">
-<a href="https://www.linkedin.com/in/mastanvali-shaik-75865520" class="ttr_header_linkedin " target="_self">
-</a>
-</div>
+  <a href="https://www.linkedin.com/in/mastanvali-shaik-75865520" class="ttr_header_linkedin" target="_self">
+    <!-- LinkedIn icon or image here -->
+  </a>
 </div>
 <div class="ttr_images_container">
-<div class="ttr_header_logo">
+  <a href="http://twitter.com/templatetoaster" class="ttr_header_twitter" target="_self">
+    <!-- Twitter icon or image here -->
+  </a>
 </div>
-<a href="http://twitter.com/templatetoaster" class="ttr_header_twitter " target="_self">
-</a>
 <div class="ttr_headershape01">
-  <div class="html_content"><p><span style="color:rgba(251,234,219,1);">📞 :9393208899</span></p><p><br style="color:rgba(251,234,219,1);" /></p></div>
+  <div class="html_content"><p><span style="color:rgba(251,234,219,1);">📞 : 9393208899</span></p><p><br style="color:rgba(251,234,219,1);" /></p></div>
   </div>
   <div class="ttr_headershape02">
-  <div class="html_content"><p><span style="color:rgba(251,234,219,1);">📧 :manpowers@gmail.com</span></p></div>
+  <div><p><span style="color:rgba(251,234,219,1);">📧 : manpowers8899@gmail.com</span></p></div>
   </div>
 </div>
 </header>
@@ -106,32 +106,48 @@ Menu
 </div>
 <div class="menu-center collapse navbar-collapse">
   <ul class="ttr_menu_items nav navbar-nav nav-center">
-      <li class="ttr_menu_items_parent dropdown active"><a href="home.html" class="ttr_menu_items_parent_link_active"><span class="menuchildicon"></span>Home</a>
-          <hr class="horiz_separator" />
-      </li>
-      <!-- main menu list closing -->
-      <li class="ttr_menu_items_parent dropdown"><a href="about-us.html" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>About Us</a>
-          <hr class="horiz_separator" />
-      </li>
-      <!-- main menu list closing -->
-      <li class="ttr_menu_items_parent dropdown" style="position: relative;">
-          <a href=# class="ttr_menu_items_parent_link" style="color: #2d2523;">
-              <span class="menuchildicon"></span>
-              Services ▼ <!-- Add the drop-down arrow symbol here -->
-          </a>
-          <ul class="dropdown-menu" style="list-style: none; padding-left: 0; background-color: #F4F4F4;">
-              <li style="padding: 10px; text-align: center; background-color: #0e0d10;"><a href="services.html" style="color: #FFF; text-decoration: none;">Packers and Movers</a></li>
-              <li style="padding: 10px; text-align: center; background-color: #0c0b11;"><a href="services.html" style="color: #FFF; text-decoration: none;">Manpower Supply</a></li>
-              <li style="padding: 10px; text-align: center; background-color: #140e0d;"><a href="#" style="color: #FFF; text-decoration: none;">Interior Designers</a></li>
-              <li style="padding: 10px; text-align: center; background-color: #110d0d;"><a href="#" style="color: #FFF; text-decoration: none;">Website Designers</a></li>
-          </ul>
-      </li>
-      <!-- main menu list closing -->
-      <li class="ttr_menu_items_parent dropdown"><a href="contact.html" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Contact</a>
-      </li>
-      <!-- main menu list closing -->
+    <li class="ttr_menu_items_parent dropdown active"><a href="home.html" class="ttr_menu_items_parent_link_active"><span class="menuchildicon"></span>Home</a>
+      <hr class="horiz_separator" />
+    </li>
+    <!-- main menu list closing -->
+    <li class="ttr_menu_items_parent dropdown"><a href="about-us.html" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>About Us</a>
+      <hr class="horiz_separator" />
+    </li>
+    <!-- main menu list closing -->
+    <li class="ttr_menu_items_parent dropdown" style="position: relative;">
+      <a href="#" class="ttr_menu_items_parent_link" style="color: #2d2523;">
+        <span class="menuchildicon"></span>
+        Services <span id="services-dropdown-button" style="font-size: 14px; cursor: pointer;">▼</span>
+      </a>
+      <ul id="services-dropdown" class="dropdown-menu" style="list-style: none; padding-left: 0; background-color: #F4F4F4; display: none;">
+        <li style="padding: 10px; text-align: center; background-color: #0e0d10;"><a href="services.html" style="color: #FFF; text-decoration: none;">Packers and Movers</a></li>
+        <li style="padding: 10px; text-align: center; background-color: #0c0b11;"><a href="services.html" style="color: #FFF; text-decoration: none;">Manpower Supply</a></li>
+        <li style="padding: 10px; text-align: center; background-color: #140e0d;"><a href="interior.html" style="color: #FFF; text-decoration: none;">Interior Designers</a></li>
+        <li style="padding: 10px; text-align: center; background-color: #110d0d;"><a href="website.html" style="color: #FFF; text-decoration: none;">Website Designers</a></li>
+      </ul>
+    </li>
+    <!-- main menu list closing -->
+    <li class="ttr_menu_items_parent dropdown"><a href="contact.html" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Contact</a>
+    </li>
+    <!-- main menu list closing -->
   </ul>
 </div>
+
+<script>
+  const servicesDropdown = document.getElementById("services-dropdown");
+  const servicesDropdownButton = document.getElementById("services-dropdown-button");
+
+  servicesDropdownButton.addEventListener("click", function() {
+    if (servicesDropdown.style.display === "none" || servicesDropdown.style.display === "") {
+      servicesDropdown.style.display = "block";
+      servicesDropdownButton.textContent = "▲";
+    } else {
+      servicesDropdown.style.display = "none";
+      servicesDropdownButton.textContent = "▼";
+    }
+  });
+</script>
+
 
 </div>
 </div>
@@ -211,90 +227,82 @@ Menu
 <div style="clear:both;width:0px;"></div>
 </div>
 </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
-            <div class="service-box">
-                <img src="images/Icon1.png" alt="Local Moving" class="service-icon">
-                <h3 class="service-title">Full-Service Relocation</h3>
-                <p class="service-description">Our full relocation service handles packing, loading, unloading, and transportation, ensuring a seamless move for you.</p>
-            </div>
-        </div>
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
+<style>
+  /* Add padding to service boxes */
+  .service-box {
+      padding: 20px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+  }
+</style>
+
+<div class="row">
+  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
+      <div class="service-box">
+          <img src="images/Icon1.png" alt="Local Moving" class="service-icon">
+          <h3 class="service-title">Full-Service Relocation</h3>
+          <p class="service-description">Our full relocation service handles packing, loading, unloading, and transportation, ensuring a seamless move for you.</p>
+      </div>
+  </div>
+  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
       <div class="service-box">
           <img src="images/Icon2.png" alt="Long Distance Moving" class="service-icon">
           <h3 class="service-title">Packing and Unpacking</h3>
           <p class="service-description">We offer expert packing and unpacking services to handle your belongings with care during the move.</p>
       </div>
-    </div>
-
-    <!-- Add margin-bottom for vertical space -->
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12" style="margin-bottom: 20px;">
+  </div>
+  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
       <div class="service-box">
           <img src="images/Icon3.png" alt="Moving Kits" class="service-icon">
           <h3 class="service-title">Loading and Unloading</h3>
           <p class="service-description">Leave the heavy lifting to us. Our team will safely load your items onto the transportation vehicle and unload them at your destination.</p>
       </div>
-    </div>
+  </div>
+  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
+      <div class="service-box">
+          <img src="images/storage.png" alt="Storage Units" class="service-icon">
+          <h3 class="service-title">Secure Storage</h3>
+          <p class="service-description">Require temporary storage? Our secure storage solutions will safeguard your items until you're ready to reclaim them.</p>
+      </div>
+  </div>
+</div>
 
-
-    <!-- Service 4: Storage Units -->
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
-        <div class="service-box">
-            <img src="images/storage.png" alt="Storage Units" class="service-icon">
-            <h3 class="service-title">Secure Storage</h3>
-            <p class="service-description">Require temporary storage? Our secure storage solutions will safeguard your items until you're ready to reclaim them.</p>
-        </div>
-    </div>
-
-    <!-- Category B: Repairs (Manpower) -->
-    <!-- Service 5: Electrical Services -->
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
-        <div class="service-box">
-            <img src="images/Icon4.png" alt="Electrical Services" class="service-icon">
-            <h3 class="service-title">Electrical Services</h3>
-            <p class="service-description">Our skilled workforce provides a range of electrical services to meet your needs.</p>
-        </div>
-    </div>
-
-    <!-- Service 6: AC Removal/Installation -->
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
-      <div class="service-box" style="margin-bottom: 20px;">
+<div class="row">
+  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
+      <div class="service-box">
+          <img src="images/Icon4.png" alt="Electrical Services" class="service-icon">
+          <h3 class="service-title">Electrical Services</h3>
+          <p class="service-description">Our skilled workforce provides a range of electrical services to meet your needs.</p>
+      </div>
+  </div>
+  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
+      <div class="service-box">
           <img src="images/Icon5.png" alt="AC Removal/Installation" class="service-icon">
           <h3 class="service-title">AC Removal/Installation</h3>
           <p class="service-description">Trust us for AC removal and installation services to keep your space comfortable.</p>
       </div>
-    </div>
-
-    <!-- Service 7: Corporate Electrical Works -->
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
-      <div class="service-box" style="margin-bottom: 20px;">
+  </div>
+  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
+      <div class="service-box">
           <img src="images/office.png" alt="Corporate Electrical Works" class="service-icon">
           <h3 class="service-title">Corporate Electrical Works</h3>
-          <p class="service-description"> We handle electrical works for corporate environments efficiently.</p>
+          <p class="service-description">We handle electrical works for corporate environments efficiently.</p>
       </div>
-    </div>
-
-
-    <!-- Service 8: Home and Office Wiring -->
-    <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
-        <div class="service-box">
-            <img src="images/Icon8.png" alt="Home and Office Wiring" class="service-icon">
-            <h3 class="service-title">Home and Office Wiring</h3>
-            <p class="service-description"> Our experts ensure proper wiring for your home and office spaces. </p>
-        </div>
-    </div>
+  </div>
+  <div class="col-xl-3 col-lg-3 col-md-3 col-sm-6 col-xs-12 col-12">
+      <div class="service-box">
+          <img src="images/Icon8.png" alt="Home and Office Wiring" class="service-icon">
+          <h3 class="service-title">Home and Office Wiring</h3>
+          <p class="service-description">Our experts ensure proper wiring for your home and office spaces.</p>
+      </div>
+  </div>
 </div>
 
 <div class=" visible-lg-block d-xl-block d-lg-block visible-md-block d-md-block visible-sm-block d-sm-block visible-xs-block d-block" style="clear: both;width:0px;"></div>
 </div>
-<div class="ttr_home_html_row3 row" >
-<div class="post_column col-xl-5 col-lg-5 col-md-6 col-sm-12 col-xs-12 col-12">
-<div class="ttr_home_html_column30">
-<div class="margin_collapsetop"></div>
+</div>
+</div>
 
-<div class="margin_collapsetop"></div>
-<div style="clear:both;width:0px;"></div>
-</div>
-</div>
 <div class=" visible-sm-block d-sm-block visible-xs-block d-block" style="clear: both;width:0px;"></div>
 <div class="post_column col-xl-7 col-lg-7 col-md-6 col-sm-12 col-xs-12 col-12">
 <div class="ttr_home_html_column31">
@@ -310,7 +318,7 @@ Menu
 <div class="post_column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
 <div class="ttr_home_html_column40">
 <div class="margin_collapsetop"></div>
-<div class="html_content"><h2 style="line-height:1.45em;"><span style="font-weight:700;font-size:1em;color:rgba(52,52,52,1);">Meet our dedicated team</span></h2><p style="line-height:2.13em;"><span style="font-size:1.071em;color:rgba(78,78,78,1);">Lorem ipsum dolor sit amet, test link adipiscing elit.Nullam dignissim convallis est.Quisque aliquam. Donec faucibus. Nunc iaculis suscipit dui.Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl.</span></p></div>
+<div class="html_content"><h2 style="line-height:1.45em;"><span style="font-weight:700;font-size:1em;color:rgba(52,52,52,1);">Elevate Spaces and Websites with Our Interior and Website Designing Services</span></h2><p style="line-height:2.13em;"><span style="font-size:1.071em;color:rgba(78,78,78,1);">Explore our comprehensive Interior and Website Designing services today.</span></p></div>
 <div class="margin_collapsetop"></div>
 <div style="clear:both;width:0px;"></div>
 </div>
@@ -319,7 +327,7 @@ Menu
 <div class="post_column col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12">
 <div class="ttr_home_html_column41">
 <div class="margin_collapsetop"></div>
-<div class="html_content"><p style="text-align:Center;line-height:1.69em;"><span class="ttr_image" style="float:none;display:block;overflow:hidden;margin:0px 0px 0px 0px;"><span><img class="ttr_uniform" style="max-height:265px;max-width:270px;margin:0px 0px 20px 0px;" src="images/32.png" alt="team" /></span></span><span style="font-weight:600;font-size:1.143em;">Carl Bond</span></p></div>
+<div class="html_content"><p style="text-align:Center;line-height:1.69em;"><span class="ttr_image" style="float:none;display:block;overflow:hidden;margin:0px 0px 0px 0px;"><span><img class="ttr_uniform" style="max-height:265px;max-width:270px;margin:0px 0px 20px 0px;" src="images/32.png" alt="team" /></span></span><span style="font-weight:600;font-size:1.143em;">Personalized Space Transformation</span></p></div>
 <div class="margin_collapsetop"></div>
 <div style="clear:both;width:0px;"></div>
 </div>
@@ -328,7 +336,7 @@ Menu
 <div class="post_column col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12">
 <div class="ttr_home_html_column42">
 <div class="margin_collapsetop"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;overflow:hidden;margin:0px 0px 0px 0px;"><span><img class="ttr_uniform" style="max-height:265px;max-width:270px;margin:0px 0px 20px 0px;" src="images/22.png" alt="team" /></span></span><span style="font-weight:600;font-size:1.143em;">Dan Cameron</span></p></div>
+<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;overflow:hidden;margin:0px 0px 0px 0px;"><span><img class="ttr_uniform" style="max-height:265px;max-width:270px;margin:0px 0px 20px 0px;" src="images/22.png" alt="team" /></span></span><span style="font-weight:600;font-size:1.143em;">Efficient Space Planning</span></p></div>
 <div class="margin_collapsetop"></div>
 <div style="clear:both;width:0px;"></div>
 </div>
@@ -337,7 +345,7 @@ Menu
 <div class="post_column col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12">
 <div class="ttr_home_html_column43">
 <div class="margin_collapsetop"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;overflow:hidden;margin:0px 0px 0px 0px;"><span><img class="ttr_uniform" style="max-height:265px;max-width:270px;margin:0px 0px 20px 0px;" src="images/41.png" alt="team" /></span></span><span style="font-weight:600;font-size:1.143em;">Isaac Dowd</span></p></div>
+<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;overflow:hidden;margin:0px 0px 0px 0px;"><span><img class="ttr_uniform" style="max-height:265px;max-width:270px;margin:0px 0px 20px 0px;" src="images/41.png" alt="team" /></span></span><span style="font-weight:600;font-size:1.143em;">Strategic Web Development</span></p></div>
 <div class="margin_collapsetop"></div>
 <div style="clear:both;width:0px;"></div>
 </div>
@@ -346,7 +354,7 @@ Menu
 <div class="post_column col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12">
 <div class="ttr_home_html_column44">
 <div class="margin_collapsetop"></div>
-<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;overflow:hidden;margin:0px 0px 0px 0px;"><span><img class="ttr_uniform" style="max-height:265px;max-width:270px;margin:0px 0px 20px 0px;" src="images/13.png" alt="team" /></span></span><span style="font-weight:600;font-size:1.143em;">Eric Clark</span></p></div>
+<div class="html_content"><p style="text-align:Center;"><span class="ttr_image" style="float:none;display:block;overflow:hidden;margin:0px 0px 0px 0px;"><span><img class="ttr_uniform" style="max-height:265px;max-width:270px;margin:0px 0px 20px 0px;" src="images/13.png" alt="team" /></span></span><span style="font-weight:600;font-size:1.143em;">Responsive Design</span></p></div>
 <div class="margin_collapsetop"></div>
 <div style="clear:both;width:0px;"></div>
 </div>
@@ -357,7 +365,7 @@ Menu
 <div class="post_column col-xl-12 col-lg-12 col-md-12 col-sm-12 col-xs-12 col-12">
 <div class="ttr_home_html_column50">
 <div class="margin_collapsetop"></div>
-<div class="html_content"><h2 style="text-align:Center;">Premier Moving Company in Hyderabad</h2><h2 style="text-align:Center;line-height:0.82em;"><span style="font-style:italic;font-size:0.556em;color:rgba(78,78,78,1);">Vijayawada,Hyderabad</span></h2><h2 style="margin:20px 0px 10px 0px;text-align:Center;line-height:0.82em;"><span><a href="contact.html" target="_self" class="btn btn-md btn-default">CONTACT US</a></span></h2></div>
+<div class="html_content"><h1 style="text-align:Center;">Your Trusted Partner for Packers and Movers & Manpower Supply </h1><h2 style="text-align:Center;line-height:0.82em;"><span style="font-style:italic;font-size:0.556em;color:rgba(78,78,78,1);">Vijayawada,Hyderabad</span></h2><h2 style="margin:20px 0px 10px 0px;text-align:Center;line-height:0.82em;"><span><a href="contact.html" target="_self" class="btn btn-md btn-default">CONTACT US</a></span></h2></div>
 <div class="margin_collapsetop"></div>
 <div style="clear:both;width:0px;"></div>
 </div>
