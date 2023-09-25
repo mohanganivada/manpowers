@@ -107,20 +107,48 @@ Menu
 </button>
 </div>
 <div class="menu-center collapse navbar-collapse">
-<ul class="ttr_menu_items nav navbar-nav nav-center">
-<li class="ttr_menu_items_parent dropdown"><a href="home.html" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Home</a>
-<hr class ="horiz_separator"/>
-</li> <!-- main menu list closing -->
-<li class="ttr_menu_items_parent dropdown"><a href="about-us.html" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>About Us</a>
-<hr class ="horiz_separator"/>
-</li> <!-- main menu list closing -->
-<li class="ttr_menu_items_parent dropdown active"><a href="services.html" class="ttr_menu_items_parent_link_active"><span class="menuchildicon"></span>Services</a>
-<hr class ="horiz_separator"/>
-</li> <!-- main menu list closing -->
-<li class="ttr_menu_items_parent dropdown"><a href="contact.html" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Contact</a>
-</li> <!-- main menu list closing -->
-</ul>
+  <ul class="ttr_menu_items nav navbar-nav nav-center">
+    <li class="ttr_menu_items_parent dropdown active"><a href="home.html" class="ttr_menu_items_parent_link_active"><span class="menuchildicon"></span>Home</a>
+      <hr class="horiz_separator" />
+    </li>
+    <!-- main menu list closing -->
+    <li class="ttr_menu_items_parent dropdown"><a href="about-us.html" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>About Us</a>
+      <hr class="horiz_separator" />
+    </li>
+    <!-- main menu list closing -->
+    <li class="ttr_menu_items_parent dropdown" style="position: relative;">
+      <a href="services.html" class="ttr_menu_items_parent_link" style="color: #2d2523;">
+        <span class="menuchildicon"></span>
+        Services <span id="services-dropdown-button" style="font-size: 14px; cursor: pointer;">▼</span>
+      </a>
+      <ul id="services-dropdown" class="dropdown-menu" style="list-style: none; padding-left: 0; background-color: #F4F4F4; display: none;">
+        <li style="padding: 10px; text-align: center; background-color: #0e0d10;"><a href="packers.html" style="color: #FFF; text-decoration: none;">Packers and Movers</a></li>
+        <li style="padding: 10px; text-align: center; background-color: #0c0b11;"><a href="manpowers.html" style="color: #FFF; text-decoration: none;">Manpower Supply</a></li>
+        <li style="padding: 10px; text-align: center; background-color: #140e0d;"><a href="interior.html" style="color: #FFF; text-decoration: none;">Interior Designers</a></li>
+        <li style="padding: 10px; text-align: center; background-color: #110d0d;"><a href="website.html" style="color: #FFF; text-decoration: none;">Website Designers</a></li>
+      </ul>
+    </li>
+    <!-- main menu list closing -->
+    <li class="ttr_menu_items_parent dropdown"><a href="contact.html" class="ttr_menu_items_parent_link"><span class="menuchildicon"></span>Contact</a>
+    </li>
+    <!-- main menu list closing -->
+  </ul>
 </div>
+
+<script>
+  const servicesDropdown = document.getElementById("services-dropdown");
+  const servicesDropdownButton = document.getElementById("services-dropdown-button");
+
+  servicesDropdownButton.addEventListener("click", function() {
+    if (servicesDropdown.style.display === "none" || servicesDropdown.style.display === "") {
+      servicesDropdown.style.display = "block";
+      servicesDropdownButton.textContent = "▲";
+    } else {
+      servicesDropdown.style.display = "none";
+      servicesDropdownButton.textContent = "▼";
+    }
+  });
+</script>
 </div>
 </div>
 </nav>
