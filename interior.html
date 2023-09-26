@@ -296,6 +296,27 @@ Menu
   </div><div class="margin_collapsetop"></div>
 </div>
 </div>
+
+<div id="popup" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 9999; align-items: center; justify-content: center; text-align: center;">
+  <div style="max-width: 100%; max-height: 80vh; object-fit: contain; position: relative; display: inline-block; background-color: white; padding: 20px;">
+      <img src="images/popup (2).jpg" alt="Popup Image" style="max-width: 100%; max-height: 100%;">
+  </div>
+</div>
+
+<!-- JavaScript to show/hide the popup -->
+<script>
+  function showPopup() {
+      var popup = document.getElementById('popup');
+      popup.style.display = 'flex'; // Show the popup
+
+      // Hide the popup after 3 seconds (3000 milliseconds)
+      setTimeout(function() {
+          popup.style.display = 'none';
+      }, 3000);
+  }
+</script>
+
+
 <div class=" visible-sm-block d-sm-block visible-xs-block d-block" style="clear: both;"></div>
 <div class="post_column col-xl-3 col-lg-3 col-md-6 col-sm-12 col-xs-12 col-12">
 <div class="footercellcolumn4">
@@ -336,9 +357,9 @@ Designed With TemplateToaster
 <!-- Optional: Add styles for the WhatsApp button -->
 <style>
   #whatsapp-button {
-      background-color: #182e20;
+      
       border-radius: 80%;
-      padding: 10px;
+      padding: 5px;
       box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   }
 
