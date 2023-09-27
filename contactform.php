@@ -1,6 +1,6 @@
 <?php 
-$body = '';
-$to = '';
+$body = 'New Contact Form Submission';
+$to = 'mohanganivada3658@gmail.com';
 unset($_POST['token']);
 if(isset($_POST['email'])) {
 $from = $_POST['email'];
